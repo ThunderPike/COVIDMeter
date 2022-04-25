@@ -14,7 +14,7 @@ describe('NewYorkTimeCovid', () => {
   describe('getHistoricalCovidDataByLocation', () => {
     it('should return a list of counties', async () => {
       const newYorkTimesCovid = new NewYorkTimesCovid();
-      const test = await newYorkTimesCovid.getHistoricalCovidDataByLocation(11427, 4);
+      const test = await newYorkTimesCovid.getHistoricalCovidDataByLocation(13619, 4);
       expect(test.counties).toHaveLength(2);
     });
   });
