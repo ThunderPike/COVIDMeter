@@ -8,7 +8,7 @@ export default class NewYorkTimesCovid {
     });
   }
 
-  request(options) {
+  request2(options) {
     return this.axios.request(options).then((value) => value.data).catch((err) => {
       throw err;
     });
@@ -27,6 +27,6 @@ export default class NewYorkTimesCovid {
     };
 
     // @ts-ignore
-    return this.request(requestOptions);
+    return this.request2(requestOptions);
   }
 }
