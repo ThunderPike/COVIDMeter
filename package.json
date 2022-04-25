@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "local": "node --es-module-specifier-resolution=node ./src/index.js"
+    "local": "node --es-module-specifier-resolution=node ./src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +17,12 @@
     "mongoose": "6.3.1"
   },
   "devDependencies": {
+    "@jest/globals": "^27.5.1",
+    "@types/jest": "^27.4.1",
     "eslint": "8.14.0",
     "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.26.0"
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "jest": "^27.5.1"
   }
 }
