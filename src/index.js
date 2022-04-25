@@ -2,15 +2,20 @@
 import express from 'express';
 import { PORT } from './config.js';
 
-// import mongodb from './services/mongodb';
-// Import Routers
-// import getRouter from './router/get.js';
+import router from './router/index.js';
 
 const app = express();
 
 app.use(express.json());
-// Middleware
-// app.use(getRouter);
+
+app.use(router);
+
+app.get('/health-check', (req, res) => {
+  res.send({
+    message: 'good',
+  });
+});
 
 app.listen(PORT, () => console.log(`⚡️ Server is listening on ${PORT}`));
+
 app.listen(3000);

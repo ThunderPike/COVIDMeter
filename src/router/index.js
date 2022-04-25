@@ -1,4 +1,5 @@
 import express from 'express';
+import CovidDeath from '../controllers/covidDeath.js';
 
 const router = express.Router();
 
@@ -13,5 +14,7 @@ router.get('/getTest', (req, res) => {
     Shirt: '👕',
   });
 });
+
+router.get('/getCovidDeath', CovidDeath.getCovidDeath);
 
 export default router;
