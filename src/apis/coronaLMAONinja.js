@@ -21,6 +21,7 @@ export default class coronaLMAONinja {
             method: 'GET',
             url : `/states/${state}`,
         }
+ 
         return this.httpRequest(requestOptions);
     }
     
